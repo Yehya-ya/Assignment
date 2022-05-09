@@ -17,7 +17,7 @@ class CategoryRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:255'],
-            'category_id' => ['nullable', Rule::exists(Category::class, 'id')]
+            'category_id' => ['sometimes', 'nullable', Rule::exists(Category::class, 'id')]
         ];
     }
 }
