@@ -11,19 +11,12 @@ class CategoryController extends Controller
 {
     public function index() : View
     {
+        $allCategories = Category::all();
         $categories = Category::where('category_id', null)->withCount('subCategories')->with('subCategories')->get();
 
         return view('categories.index', [
-            'categories' => $categories
-        ]);
-    }
-
-    public function create() : View
-    {
-        $categories = Category::all();
-
-        return view('categories.create', [
-            'categories' => $categories
+            'categories' => $categories,
+            'allCategories' => $allCategories
         ]);
     }
 
