@@ -5,9 +5,9 @@ project was built using laravel framework
 ## Requirements
 
 Php >= 7.3<br>
-composesr
-npm
-git
+composesr<br>
+npm<br>
+git<br>
 
 ## setup
 
@@ -24,7 +24,9 @@ npm install
 npm run dev
 ```
 
-3) Copy .env.example file to .env on the root folder and change the needed configration for the database. 
+3) Copy .env.example file to .env on the root folder and change the needed configration for the database.<br>
+
+
 on windows 
 ```sh
 copy .env.example .env 
